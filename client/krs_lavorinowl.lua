@@ -8,14 +8,7 @@
 
 ESX = exports.es_extended:getSharedObject()
 
-local agricoltore = false
-local petroliere = false
-local boscaiolo = false
-local pescatore = false
-local mungitore = false
-local minatore = false 
-local macellaio = false
-local elettricista = false
+local lavoro = false
 
 -- COORDS RACCOLTA ARANCE --
 local krsarance = {
@@ -206,7 +199,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-                if agricoltore then
+                if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 5000,
@@ -249,7 +242,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-                if agricoltore then
+                if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
             if lib.progressCircle({
                 duration = 5000,
@@ -299,7 +292,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-                if petroliere then
+                if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 5000,
@@ -343,7 +336,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-                if petroliere then
+                if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 5000,
@@ -392,7 +385,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if boscaiolo then
+		        if lavoro then
                  ascia = CreateObject(GetHashKey('prop_w_me_hatchet'), 0, 0, 0, true, true, true)
                  AttachEntityToEntity(ascia, PlayerPedId(), GetPedBoneIndex(PlayerPedId(), 57005), 0.15, -0.02, -0.02, 350.0, 100.00, 280.0, true, true, false, true, 1, true)
                  FreezeEntityPosition(PlayerPedId(), true)
@@ -440,7 +433,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if boscaiolo then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 5000,
@@ -491,7 +484,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if minatore then
+		        if lavoro then
                 piccone = CreateObject(GetHashKey('prop_tool_pickaxe'), 0, 0, 0, true, true, true)
                 AttachEntityToEntity(piccone, PlayerPedId(), GetPedBoneIndex(PlayerPedId(), 57005), 0.15, -0.02, -0.02, 350.0, 100.00, 280.0, true, true, false, true, 1, true)
                 FreezeEntityPosition(PlayerPedId(), true)
@@ -538,7 +531,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 1,
             action = function()
-		        if minatore then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 5000,
@@ -588,7 +581,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if macellaio then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 2000,
@@ -630,7 +623,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if macellaio then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 2000,
@@ -672,7 +665,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if macellaio then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 2000,
@@ -715,7 +708,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if macellaio then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 5000,
@@ -764,7 +757,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if pescatore then
+		        if lavoro then
                 cannadapesca = CreateObject(GetHashKey('prop_fishing_rod_02'), 0, 0, 0, true, true, true)
                 AttachEntityToEntity(cannadapesca, PlayerPedId(), GetPedBoneIndex(PlayerPedId(), 18905), 0.1, 0.05, 0, 80.0, 120.0, 160.0, true, true, false, true, 1, true)
                 FreezeEntityPosition(PlayerPedId(), true)
@@ -811,7 +804,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if pescatore then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 10000,
@@ -860,7 +853,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if mungitore then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 10000,
@@ -951,7 +944,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if mungitore then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)  
                 if lib.progressCircle({
                     duration = 5000,
@@ -989,7 +982,7 @@ end)
 Citizen.CreateThread(function()
     for krs,karos in pairs(elettricista) do
         TriggerEvent('gridsystem:registerMarker', {
-            name = 'elettricista'..karos.x,
+            name = 'mungi'..karos.x,
             pos = vector3(karos.x, karos.y, karos.z),
             size = vector3(2.1,2.1,2.1),
             scale = vector3(0.7, 0.7, 0.7),
@@ -999,7 +992,7 @@ Citizen.CreateThread(function()
             control = 'E',
             type = 2,
             action = function()
-		        if elettricista then
+		        if lavoro then
                 FreezeEntityPosition(PlayerPedId(), true)
                 if lib.progressCircle({
                     duration = 10000,
@@ -1015,10 +1008,11 @@ Citizen.CreateThread(function()
                         clip = 'fixing_a_ped' 
                     },
                 }) then end
-                Citizen.Wait(1000)
+                Citizen.Wait(3000)
                 ClearPedTasks(PlayerPedId())
                 FreezeEntityPosition(PlayerPedId(), false)
                 TriggerServerEvent('krs_elettricista')
+                ExecuteCommand("me ⚡")
                 else
                     ESX.ShowNotification('Vai prima al centro impieghi')
 		        end					
