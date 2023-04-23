@@ -586,7 +586,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 2000,
                     position = 'bottom',
-                    label = 'Taking the chicken'
+                    label = 'Taking the chicken',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -629,7 +629,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 2000,
                     position = 'bottom',
-                    label = 'cleaning the chicken'
+                    label = 'cleaning the chicken',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -672,7 +672,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 2000,
                     position = 'bottom',
-                    label = 'Cutting the chicken'
+                    label = 'Cutting the chicken',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
