@@ -1035,7 +1035,7 @@ lib.registerContext({
     end,
     options = {
         {
-            title = "   Lumberjack Work Menu ",
+            title = "🪵 Lumberjack Work Menu ",
             description = '..Works as a woodcutter..',
             arrow = false,
             event = 'lumberjack'
