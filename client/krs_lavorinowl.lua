@@ -179,7 +179,11 @@ TriggerEvent('gridsystem:registerMarker', {
         local veh = GetVehiclePedIsIn(PlayerPedId(), false)
         DeleteEntity(veh)
         else
-            ESX.ShowNotification('You cannot store your vehicle if you are not working')
+            lib.notify({
+                title = '🛻',
+                description = 'You cannot store your vehicle if you are not working',
+                type = 'error'
+            })
         end
     end
 })
@@ -221,7 +225,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_arance')
                 ExecuteCommand("me 🍊")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🍊',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
                 end
             end,
         })
@@ -271,7 +279,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processoagricoltore')
                 ExecuteCommand("me 🍹")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🍹',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
                 end
             end,
         })
@@ -315,7 +327,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_petrolio')
                 ExecuteCommand("me ⛽")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '⛽',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
                 end
             end,
         })
@@ -364,7 +380,12 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processopetroliere')
                 ExecuteCommand("me ⛽")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '⛽',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
+                   
                 end
             end,
         })
@@ -410,7 +431,12 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_boscaiolo')
                 ExecuteCommand("me 🪵")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🪵',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
+                   
                     
 		        end					
             end,
@@ -462,7 +488,12 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processoboscaiolo')
                 ExecuteCommand("me 🪵")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🪵',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
+                   
                    	
 		        end					
             end,
@@ -508,8 +539,12 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_minatore')
                 ExecuteCommand("me 🪨")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
-                    
+                      lib.notify({
+                        title = '🪨',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
+                   
 		        end					
             end,
         })
@@ -559,7 +594,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processominatore')
                 ExecuteCommand("me 💎")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '💎',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
                    
 		        end					
             end,
@@ -603,7 +642,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_prendipollo')
                 ExecuteCommand("me 🐔")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🐔',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
 		        end					
             end,
         })
@@ -646,7 +689,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_puliscipollo')
                 ExecuteCommand("me 🐔")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🐔',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
 		        end					
             end,
         })
@@ -689,7 +736,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_pollotagliato')
                 ExecuteCommand("me 🍗")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🐔',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
 		        end					
             end,
         })
@@ -739,7 +790,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processopollo')
                 ExecuteCommand("me 🍗🍗🍗")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🐔',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
 		        end					
             end,
         })
@@ -785,7 +840,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_pescatore')
                 ExecuteCommand("me 🐟")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🐟',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
 		        end					
             end,
         })
@@ -835,7 +894,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processopescatore')
                 ExecuteCommand("me 🐟")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🐟',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
 		        end					
             end,
         })
@@ -878,7 +941,11 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_mungimucca')
                 ExecuteCommand("me 🐄")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🐄',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
 		        end					
             end,
         })
@@ -975,7 +1042,12 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processolatte')
                 ExecuteCommand("me 🐄")	
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '🐄',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
+                    
 		        end					
             end,
         })
@@ -1017,7 +1089,12 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_elettricista')
                 ExecuteCommand("me ⚡")
                 else
-                    ESX.ShowNotification('Go to the job center first')
+                    lib.notify({
+                        title = '⚡',
+                        description = 'Go to the job center first',
+                        type = 'error'
+                    })
+                    
 		        end					
             end,
         })
@@ -1190,7 +1267,7 @@ end
 
 -- INIZIO ELETTRICISTA -- 
 KRS_Electrician = function()
-    elettricista = true
+    lavoro = true
     ESX.Game.SpawnVehicle('boxville', vector3(1214.5858154297,-1321.7121582031,35.226902008057), 85.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
     end)
@@ -1208,7 +1285,7 @@ end
 
 -- INIZIO PESCATORE -- 
 KRS_Fisherman = function()
-    pescatore = true
+    lavoro = true
     ESX.Game.SpawnVehicle('burrito3', vector3(1214.5858154297,-1321.7121582031,35.226902008057), 85.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
     end)
@@ -1229,7 +1306,7 @@ end
 
 -- MUNGI MUCCA --
 KRS_Milker = function()
-    mungitore = true
+    lavoro = true
     ESX.Game.SpawnVehicle('youga2', vector3(1218.6452636719,-1301.7208251953,35.226959228516), 86.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
     end)
@@ -1249,7 +1326,7 @@ end
 
 -- MACELLAIO --
 KRS_Butcher = function()
-    macellaio = true
+    lavoro = true
     ESX.Game.SpawnVehicle('kalahari', vector3(1218.6452636719,-1301.7208251953,35.226959228516), 86.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
     end)
@@ -1270,7 +1347,7 @@ end
 
 -- AGRICOLTORE -- 
 KRS_Farmer = function()
-    agricoltore = true
+    lavoro = true
     ESX.Game.SpawnVehicle('kalahari', vector3(1218.6452636719,-1301.7208251953,35.226959228516), 86.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
     end)
@@ -1293,7 +1370,7 @@ end
 
 -- PETROLIERE -- 
 KRS_Tankers = function()
-    petroliere = true
+    lavoro = true
     ESX.Game.SpawnVehicle('bodhi2', vector3(1218.6452636719,-1301.7208251953,35.226959228516), 86.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
     end)
@@ -1314,7 +1391,7 @@ end
 
 -- INIZIO BOSCAIOLO -- 
 KRS_Lumberjack = function()
-    boscaiolo = true
+    lavoro = true
     ESX.Game.SpawnVehicle('mule3', vector3(1214.5858154297,-1321.7121582031,35.226902008057), 85.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
     end)
@@ -1335,7 +1412,7 @@ end
 
 -- INIZIO MINATORE -- 
 KRS_Miner = function()
-    minatore = true
+    lavoro = true
     ESX.Game.SpawnVehicle('tiptruck', vector3(1214.5858154297,-1321.7121582031,35.226902008057), 85.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
     end)
