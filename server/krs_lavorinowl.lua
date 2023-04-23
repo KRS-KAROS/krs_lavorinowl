@@ -16,10 +16,10 @@ RegisterServerEvent('krs_arance')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('arance').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non puoi raccogliere le arance da qui!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You can\'t pick oranges from here!!'})
 	else
 		xPlayer.addInventoryItem('arance', 1)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai raccolto le arance dall\'albero!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You picked oranges from the tree!!'})
 		
 	end
 end)
@@ -30,11 +30,11 @@ AddEventHandler('krs_processoagricoltore', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local karos = xPlayer.getInventoryItem('arance').count
 	if karos < 3 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non possiedi le arance!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You don\'t own the oranges!!'})
 	else
 		xPlayer.addInventoryItem('succodifrutta', 1)
 		xPlayer.removeInventoryItem('arance', 3)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai lavorato le arance, fatto un buon succo di frutta!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You worked oranges, made good juice!!'})
 	end
 end)
 
@@ -46,10 +46,10 @@ RegisterServerEvent('krs_petrolio')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('petrolio').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non puoi prelevare il petrolio da qui!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You can\'t get oil from here!!'})
 	else
 		xPlayer.addInventoryItem('petrolio', 1)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai prelevato il petrolio!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You picked up the oil!!'})
 	end
 end)
 
@@ -59,11 +59,11 @@ AddEventHandler('krs_processopetroliere', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local karos = xPlayer.getInventoryItem('petrolio').count
 	if karos < 3 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non possiedi il petrolio!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You don\'t own the oil!!'})
 	else
 		xPlayer.addInventoryItem('taniche_benzina', 1)
 		xPlayer.removeInventoryItem('petrolio', 3)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai lavorato il petrolio!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You worked the oil!!'})
 	end
 end)
 
@@ -75,10 +75,10 @@ RegisterServerEvent('krs_boscaiolo')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('troncodilegno').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'sei troppo lontano dal tronco!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'you are too far from the trunk!!'})
 	else
 		xPlayer.addInventoryItem('troncodilegno', 3)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai tagliato il tronco!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You cut the trunk!!'})
 	end
 end)
 
@@ -87,11 +87,11 @@ AddEventHandler('krs_processoboscaiolo', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local karos = xPlayer.getInventoryItem('troncodilegno').count
 	if karos < 3 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non possiedi i tronchi di legno!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You don\'t own the wooden logs!!'})
 	else
 		xPlayer.addInventoryItem('tavoledilegno', 1)
 		xPlayer.removeInventoryItem('troncodilegno', 3)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai lavorato il tronco!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You worked the trunk!!'})
 	end
 end)
 -- FINE BOSCAIOLO -- 
@@ -103,10 +103,10 @@ RegisterServerEvent('krs_minatore')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('roccia').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non puoi picconare in questa zona!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You cannot pickaxe in this area!!'})
 	else
 		xPlayer.addInventoryItem('roccia', 1)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai prelevato le rocce dalla cava!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You have taken the rocks from the quarry!!'})
 	end
 end)
 
@@ -115,11 +115,11 @@ AddEventHandler('krs_processominatore', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local karos = xPlayer.getInventoryItem('roccia').count
 	if karos < 3 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non possiedi le rocce per lavarle!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You don\'t have the rocks to wash them!!'})
 	else
 		xPlayer.addInventoryItem('minerale', 1)
 		xPlayer.removeInventoryItem('roccia', 3)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai lavato le rocce si sono sciolte e diventati minerali!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You have washed the rocks they have melted and become minerals!!'})
 	end
 end)
 -- FINE MINATORE -- 
@@ -131,10 +131,10 @@ RegisterServerEvent('krs_prendipollo')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('pollo').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non puoi raccogliere il pollo!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You can\'t pick chicken!!'})
 	else
 		xPlayer.addInventoryItem('pollo', 1)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai raccolto il pollo!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You picked up the chicken!!'})
 	end
 end)
 
@@ -144,11 +144,11 @@ RegisterServerEvent('krs_puliscipollo')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('pollo').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non possiedi il pollo!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You don\'t own the chicken!!'})
 	else
 		xPlayer.removeInventoryItem('pollo', 1)
 		xPlayer.addInventoryItem('pollo_pulito', 3)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai lavato il pollo!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You washed the chicken!!'})
 	end
 end)
 
@@ -158,11 +158,11 @@ RegisterServerEvent('krs_pollotagliato')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('pollo_pulito').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non possiedi le cosce di pollo!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You don\'t own chicken legs!!'})
 	else
 		xPlayer.removeInventoryItem('pollo_pulito', 1)
 		xPlayer.addInventoryItem('cosce_pollo', 3)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai tagliato il  pollo!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You cut the chicken!!'})
 
 	end
 end)
@@ -174,9 +174,9 @@ AddEventHandler('krs_processopollo', function()
     if karos >= 3 then
         xPlayer.removeInventoryItem('cosce_pollo', 3)
         xPlayer.addInventoryItem('pollo_processato', 1)
-        TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai confezionato il pollo!!'})
+        TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You packed the chicken!!'})
     else
-        TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non hai abbastanza cosce di pollo!!'})
+        TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You don\'t have enough chicken legs!!'})
     end
 end)
 
@@ -189,10 +189,10 @@ RegisterServerEvent('krs_pescatore')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('trota').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non puoi pescare in questa zona!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You cannot fish in this area!!'})
 	else
 		xPlayer.addInventoryItem('trota', 1)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai pescato una trota, grandioso amico mio!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You caught a trout, great my friend!!'})
 		
 	end
 end)
@@ -202,11 +202,11 @@ AddEventHandler('krs_processopescatore', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local karos = xPlayer.getInventoryItem('trota').count
 	if karos < 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non puoi confezionare!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You can\'t pack!!'})
 	else
 		xPlayer.addInventoryItem('trota_lavorata', 1)
 		xPlayer.removeInventoryItem('trota', 3)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai confezionato la trota'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You packed the trout'})
 
 	end
 end)
@@ -219,11 +219,11 @@ RegisterServerEvent('krs_mungimucca')
 	local ped = GetPlayerPed(source)
 	local karos2 = xPlayer.getInventoryItem('latte').count
 	if karos2 >= 100 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non puoi mungere!!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You can\'t milk!!'})
 
 	else
 		xPlayer.addInventoryItem('latte', 1)
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai munto la mucca e prelevato il latte!'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You have milked the cow and drawn the milk!'})
 
 	end
 end)
@@ -236,9 +236,9 @@ AddEventHandler('krs_processolatte', function()
     if latteCount >= 3 then
         xPlayer.removeInventoryItem('latte', 3)
         xPlayer.addInventoryItem('latte_lavorato', 1)
-        TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai confezionato il latte'})
+        TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You packed the milk'})
     else
-        TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'Non hai abbastanza latte da confezionare'})
+        TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'error', description = 'You don\'t have enough milk to pack'})
     end
 end)
 
@@ -251,7 +251,7 @@ AddEventHandler('krs_elettricista', function()
     local karos = 100
     local xPlayer = ESX.GetPlayerFromId(source)
     if karos > 0 then
-		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'Hai riparato il dispositivo e guadagnato: 100💲'})
+		TriggerClientEvent('ox_lib:notify', xPlayer.source, {type = 'success', description = 'You fixed your device and earned: 100💲'})
     xPlayer.addMoney(karos)
     end
 end)

@@ -151,7 +151,7 @@ TriggerEvent('gridsystem:registerMarker', {
 	pos = vector3(1200.5822, -1276.2064, 35.2247),
 	scale = vector3(1.5, 1.5, 1.5),
 	size = vector3(2.5, 2.5, 2.5),
-	msg = '~b~[E] ~w~Trova Lavoro',
+	msg = '~b~[E] ~w~Find a Job',
 	type = 1,
 	show3D = false,
     color =  { r = 0, b = 255, g = 0 },
@@ -168,7 +168,7 @@ TriggerEvent('gridsystem:registerMarker', {
 	pos = vector3(1211.576171875,-1262.3973388672,35.22677230835),
 	scale = vector3(2.0, 2.0, 2.0),
 	size = vector3(3.2, 3.2, 3.2),
-	msg = 'Premi ~INPUT_CONTEXT~ per depositare il veicolo',
+	msg = 'Press ~INPUT_CONTEXT~ to deposit the vehicle',
 	type = 36,
     show3D = false,
     color =  { r = 0, b = 255, g = 0 },
@@ -179,7 +179,7 @@ TriggerEvent('gridsystem:registerMarker', {
         local veh = GetVehiclePedIsIn(PlayerPedId(), false)
         DeleteEntity(veh)
         else
-            ESX.ShowNotification('Non puoi depositare il veicolo se non stai lavorando')
+            ESX.ShowNotification('You cannot store your vehicle if you are not working')
         end
     end
 })
@@ -195,7 +195,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per raccogliere arance',
+            msg = 'Press ~INPUT_CONTEXT~ to collect oranges',
             control = 'E',
             type = 2,
             action = function()
@@ -204,7 +204,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Raccogliendo le arance',
+                    label = 'Picking the oranges',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -221,7 +221,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_arance')
                 ExecuteCommand("me 🍊")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
                 end
             end,
         })
@@ -238,7 +238,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per processare le arance',
+            msg = 'Press ~INPUT_CONTEXT~ to process oranges',
             control = 'E',
             type = 2,
             action = function()
@@ -247,7 +247,7 @@ Citizen.CreateThread(function()
             if lib.progressCircle({
                 duration = 5000,
                 position = 'bottom',
-                label = 'processando le arance',
+                label = 'processing oranges',
                 useWhileDead = false,
                 canCancel = true,
                 disable = {
@@ -271,7 +271,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processoagricoltore')
                 ExecuteCommand("me 🍹")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
                 end
             end,
         })
@@ -288,7 +288,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per raccogliere il petrolio',
+            msg = 'Press ~INPUT_CONTEXT~ to collect oil',
             control = 'E',
             type = 2,
             action = function()
@@ -297,7 +297,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Raccogliendo il petrolio',
+                    label = 'Collecting oil',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -315,7 +315,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_petrolio')
                 ExecuteCommand("me ⛽")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
                 end
             end,
         })
@@ -332,7 +332,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per processare il petrolio',
+            msg = 'Press ~INPUT_CONTEXT~ to process the oil',
             control = 'E',
             type = 2,
             action = function()
@@ -341,7 +341,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Lavorando il petrolio',
+                    label = 'Working the oil',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -364,7 +364,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processopetroliere')
                 ExecuteCommand("me ⛽")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
                 end
             end,
         })
@@ -381,7 +381,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per tagliare il legno',
+            msg = 'Press ~INPUT_CONTEXT~ to cut wood',
             control = 'E',
             type = 2,
             action = function()
@@ -395,7 +395,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Tagliando il legname',
+                    label = 'Cutting the timber',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -410,7 +410,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_boscaiolo')
                 ExecuteCommand("me 🪵")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
                     
 		        end					
             end,
@@ -429,7 +429,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per processare il legno',
+            msg = 'Press ~INPUT_CONTEXT~ to process wood',
             control = 'E',
             type = 2,
             action = function()
@@ -438,7 +438,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Lavorando il legno',
+                    label = 'Working the wood',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -462,7 +462,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processoboscaiolo')
                 ExecuteCommand("me 🪵")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
                    	
 		        end					
             end,
@@ -480,7 +480,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per minare',
+            msg = 'Press ~INPUT_CONTEXT~ to mine',
             control = 'E',
             type = 2,
             action = function()
@@ -494,7 +494,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Picconando le rocce',
+                    label = 'Picking rocks',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -508,7 +508,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_minatore')
                 ExecuteCommand("me 🪨")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
                     
 		        end					
             end,
@@ -527,7 +527,7 @@ Citizen.CreateThread(function()
             scale = vector3(10.7, 7.7, 7.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per processare i minerali',
+            msg = 'Press ~INPUT_CONTEXT~ to process minerals',
             control = 'E',
             type = 1,
             action = function()
@@ -536,7 +536,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Lavando i minerali',
+                    label = 'Washing the minerals',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -559,7 +559,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processominatore')
                 ExecuteCommand("me 💎")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
                    
 		        end					
             end,
@@ -577,7 +577,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per prendere il pollo',
+            msg = 'Press ~INPUT_CONTEXT~ to get the chicken',
             control = 'E',
             type = 2,
             action = function()
@@ -586,6 +586,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 2000,
                     position = 'bottom',
+                    label = 'Taking the chicken'
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -602,7 +603,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_prendipollo')
                 ExecuteCommand("me 🐔")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -619,7 +620,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per pulire il pollo',
+            msg = 'Press ~INPUT_CONTEXT~ to clean the chicken',
             control = 'E',
             type = 2,
             action = function()
@@ -628,6 +629,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 2000,
                     position = 'bottom',
+                    label = 'cleaning the chicken'
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -644,7 +646,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_puliscipollo')
                 ExecuteCommand("me 🐔")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -661,7 +663,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per tagliare il pollo',
+            msg = 'Press ~INPUT_CONTEXT~ to cut the chicken',
             control = 'E',
             type = 2,
             action = function()
@@ -670,6 +672,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 2000,
                     position = 'bottom',
+                    label = 'Cutting the chicken'
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -686,7 +689,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_pollotagliato')
                 ExecuteCommand("me 🍗")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -704,7 +707,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per confezionare il pollo',
+            msg = 'Press ~INPUT_CONTEXT~ to pack the chicken',
             control = 'E',
             type = 2,
             action = function()
@@ -713,7 +716,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Confezionando il pollo',
+                    label = 'Packaging the chicken',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -736,7 +739,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processopollo')
                 ExecuteCommand("me 🍗🍗🍗")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -753,7 +756,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per pescare',
+            msg = 'Press ~INPUT_CONTEXT~ to draw',
             control = 'E',
             type = 2,
             action = function()
@@ -764,7 +767,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 15000,
                     position = 'bottom',
-                    label = 'Aspettando che il pesce abbocchi',
+                    label = 'Waiting for the fish to bite',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -782,7 +785,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_pescatore')
                 ExecuteCommand("me 🐟")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -800,7 +803,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per lavorare il pesce',
+            msg = 'Press ~INPUT_CONTEXT~ to pack the fish',
             control = 'E',
             type = 2,
             action = function()
@@ -809,7 +812,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 10000,
                     position = 'bottom',
-                    label = 'Lavorando il pesce',
+                    label = 'Packaging the fish',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -832,7 +835,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processopescatore')
                 ExecuteCommand("me 🐟")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -849,7 +852,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per mungere la mucca',
+            msg = 'Press ~INPUT_CONTEXT~ to milk the cow',
             control = 'E',
             type = 2,
             action = function()
@@ -858,7 +861,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 10000,
                     position = 'bottom',
-                    label = 'Mungendo la mucca',
+                    label = 'Milking the cow',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -875,7 +878,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_mungimucca')
                 ExecuteCommand("me 🐄")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -940,7 +943,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per processare il latte',
+            msg = 'Press ~INPUT_CONTEXT~ to process the milk',
             control = 'E',
             type = 2,
             action = function()
@@ -949,7 +952,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 5000,
                     position = 'bottom',
-                    label = 'Confezionando il latte',
+                    label = 'Packing the milk',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -972,7 +975,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_processolatte')
                 ExecuteCommand("me 🐄")	
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -988,7 +991,7 @@ Citizen.CreateThread(function()
             scale = vector3(0.7, 0.7, 0.7),
             color =  { r = 0, b = 255, g = 0 },
             drawDistance = 4.0,
-            msg = 'Premi ~INPUT_CONTEXT~ per riparare',
+            msg = 'Press ~INPUT_CONTEXT~ to repair',
             control = 'E',
             type = 2,
             action = function()
@@ -997,7 +1000,7 @@ Citizen.CreateThread(function()
                 if lib.progressCircle({
                     duration = 10000,
                     position = 'bottom',
-                    label = '..Riparazione in corso..',
+                    label = '..Repair in progress..',
                     useWhileDead = false,
                     canCancel = true,
                     disable = {
@@ -1014,7 +1017,7 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('krs_elettricista')
                 ExecuteCommand("me ⚡")
                 else
-                    ESX.ShowNotification('Vai prima al centro impieghi')
+                    ESX.ShowNotification('Go to the job center first')
 		        end					
             end,
         })
@@ -1032,58 +1035,58 @@ lib.registerContext({
     end,
     options = {
         {
-            title = "🪵 Menu Lavoro Boscaiolo ",
-            description = '..Lavora come taglialegna..',
+            title = "   Lumberjack Work Menu ",
+            description = '..Works as a woodcutter..',
             arrow = false,
-            event = 'boscaiolo'
+            event = 'lumberjack'
         },
         {
-            title = "🍊 Menu Lavoro Agricoltore Arance",
-            description = '..Lavora come agricoltore di arance..',
+            title = "🍊 Orange Farmer Job Menu",
+            description = '..Work as an orange farmer..',
             arrow = false,
-            event = 'agricoltore'
+            event = 'farmer'
         },
         {
-            title = "⛽ Menu Lavoro Petroliere",
-            description = '..Lavora come petroliere..',
+            title = "⛽ Tanker Work Menu",
+            description = '..Work as an oilman..',
             arrow = false,
-            event = 'petroliere'
+            event = 'oil tanker'
         },
         {
-            title = "⛏️ Menu Lavoro Minatore",
-            description = '..Lavora come minatore..',
+            title = "⛏️ Miner Work Menu",
+            description = '..Work as a miner..',
             arrow = false,
-            event = 'minatore'
+            event = 'miner'
         },
         {
-            title = "🐔 Menu Lavoro Macellaio",
-            description = '..Lavora come macellaio..',
+            title = "🐔 Butcher Work Menu",
+            description = '..He works as a butcher..',
             arrow = false,
-            event = 'macellaio'
+            event = 'butcher'
         },
         {
-            title = "🐟 Menu Lavoro Pescatore",
-            description = '..Lavora come pescatore..',
+            title = "🐟 Fisherman Job Menu",
+            description = '..Work as a fisherman..',
             arrow = false,
-            event = 'pescatore'
+            event = 'fisherman'
         },
         {
-            title = "🐄 Menu Lavoro Mungitore",
-            description = '..Lavora come Mungitore di latte..',
+            title = "🐄 Milker Job Menu",
+            description = '..Work as a Milker..',
             arrow = false,
-            event = 'lattarolo'
+            event = 'milker'
         },
         {
-            title = "⚡ Menu Lavoro Elettricista",
-            description = '..Lavora come Elettricista..',
+            title = "⚡ Electrician Job Menu",
+            description = '..Work as an Electrician..',
             arrow = false,
-            event = 'elettricista'
+            event = 'electrician'
         },
         {
-            title = "🔚 Annulla Lavoro",
-            description = 'Annulla il lavoro attuale',
+            title = "🔚 Cancel Work",
+            description = 'Cancel current job',
             arrow = false,
-            event = 'annullalavoro'
+            event = 'canceljob'
         },
     },
 })
@@ -1095,61 +1098,61 @@ AddEventHandler('krs_sceglilavoro', function()
 end)
 
 
-RegisterNetEvent('boscaiolo')
-AddEventHandler('boscaiolo', function()
-    KRS_Boscaiolo()
-    print("Lavoro di boscaiolo selezionato.")
+RegisterNetEvent('lumberjack')
+AddEventHandler('lumberjack', function()
+    KRS_Lumberjack()
+    print("Lumberjack job selected.")
 end)
 
-RegisterNetEvent('agricoltore')
-AddEventHandler('agricoltore', function()
-    KRS_Agricoltore()
-    print("Lavoro di agricoltore selezionato.")
+RegisterNetEvent('farmer')
+AddEventHandler('farmer', function()
+    KRS_Farmer()
+    print("Selected farmer job.")
 end)
 
-RegisterNetEvent('petroliere')
-AddEventHandler('petroliere', function()
-    KRS_Petroliere()
-    print("Lavoro di petroliere selezionato.")
+RegisterNetEvent('tanker')
+AddEventHandler('tanker', function()
+    KRS_Tankers()
+    print("Selected tanker job.")
 end)
 
--- Funzione per gestire l'opzione di lavoro minatore
-RegisterNetEvent('minatore')
-AddEventHandler('minatore', function()
-    KRS_Minatore()
-    print("Lavoro di minatore selezionato.")
+-- Function to manage miner job option
+RegisterNetEvent('miner')
+AddEventHandler('miner', function()
+    KRS_Miner()
+    print("Selected miner job.")
 end)
 
--- Funzione per gestire l'opzione di lavoro macellaio
-RegisterNetEvent('macellaio')
-AddEventHandler('macellaio', function()
-    KRS_Macellaio()
-    print("Lavoro di macellaio selezionato.")
+-- Function to manage the butcher job option
+RegisterNetEvent('butcher')
+AddEventHandler('butcher', function()
+    KRS_Butcher()
+    print("Selected butcher job.")
 end)
 
-RegisterNetEvent('pescatore')
-AddEventHandler('pescatore', function()
-    KRS_Pescatore()
-    print("Lavoro del pescatore selezionato.")
+RegisterNetEvent('fisherman')
+AddEventHandler('fisherman', function()
+    KRS_Fisherman()
+    print("Fisherman's job selected.")
 end)
 
-RegisterNetEvent('lattarolo')
-AddEventHandler('lattarolo', function()
-    KRS_Lattarolo()
-    print("Lavoro del mungitore selezionato.")
+RegisterNetEvent('milker')
+AddEventHandler('milker', function()
+    KRS_Milker()
+    print("Selected milker job.")
 end)
 
-RegisterNetEvent('elettricista')
-AddEventHandler('elettricista', function()
-    KRS_Elettricista()
-    print("Lavoro dell'elettricista selezionato.")
+RegisterNetEvent('electrician')
+AddEventHandler('electrician', function()
+    KRS_Electrician()
+    print("Selected electrician job.")
 end)
 
 -- Funzione per gestire l'opzione di annullare il lavoro
-RegisterNetEvent('annullalavoro')
-AddEventHandler('annullalavoro', function()
-    KRS_Annullalavoro()
-    print("Lavoro annullato.")
+RegisterNetEvent('canceljob')
+AddEventHandler('canceljob', function()
+    KRS_Canceljob()
+    print("Job cancelled.")
 end)
 
 
@@ -1163,7 +1166,7 @@ krsblip = AddBlipForCoord(1200.6398925781,-1274.7916259766)
     EndTextCommandSetBlipName(krsblip)
 
 -- ANNULLA LAVORO --    
-KRS_Annullalavoro = function()
+KRS_Canceljob = function()
     lavoro = false
     RemoveBlip(karos1)
     RemoveBlip(karos2)
@@ -1186,7 +1189,7 @@ end
 -- FINE ANNULLA LAVORO --  
 
 -- INIZIO ELETTRICISTA -- 
-KRS_Elettricista = function()
+KRS_Electrician = function()
     elettricista = true
     ESX.Game.SpawnVehicle('boxville', vector3(1214.5858154297,-1321.7121582031,35.226902008057), 85.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
@@ -1204,7 +1207,7 @@ end
 -- FINE ELETTRICISTA -- 
 
 -- INIZIO PESCATORE -- 
-KRS_Pescatore = function()
+KRS_Fisherman = function()
     pescatore = true
     ESX.Game.SpawnVehicle('burrito3', vector3(1214.5858154297,-1321.7121582031,35.226902008057), 85.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
@@ -1225,7 +1228,7 @@ end
 -- FINE PESCATORE --
 
 -- MUNGI MUCCA --
-KRS_Lattarolo = function()
+KRS_Milker = function()
     mungitore = true
     ESX.Game.SpawnVehicle('youga2', vector3(1218.6452636719,-1301.7208251953,35.226959228516), 86.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
@@ -1245,7 +1248,7 @@ KRS_Lattarolo = function()
 end
 
 -- MACELLAIO --
-KRS_Macellaio = function()
+KRS_Butcher = function()
     macellaio = true
     ESX.Game.SpawnVehicle('kalahari', vector3(1218.6452636719,-1301.7208251953,35.226959228516), 86.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
@@ -1266,7 +1269,7 @@ end
 -- FINE LAVORO MACELLAIO --
 
 -- AGRICOLTORE -- 
-KRS_Agricoltore = function()
+KRS_Farmer = function()
     agricoltore = true
     ESX.Game.SpawnVehicle('kalahari', vector3(1218.6452636719,-1301.7208251953,35.226959228516), 86.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
@@ -1289,7 +1292,7 @@ end
 
 
 -- PETROLIERE -- 
-KRS_Petroliere = function()
+KRS_Tankers = function()
     petroliere = true
     ESX.Game.SpawnVehicle('bodhi2', vector3(1218.6452636719,-1301.7208251953,35.226959228516), 86.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
@@ -1310,7 +1313,7 @@ end
 -- FINE LAVORO PETROLIERE -- 
 
 -- INIZIO BOSCAIOLO -- 
-KRS_Boscaiolo = function()
+KRS_Lumberjack = function()
     boscaiolo = true
     ESX.Game.SpawnVehicle('mule3', vector3(1214.5858154297,-1321.7121582031,35.226902008057), 85.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
@@ -1331,7 +1334,7 @@ end
 -- FINE BOSCAIOLO --
 
 -- INIZIO MINATORE -- 
-KRS_Minatore = function()
+KRS_Miner = function()
     minatore = true
     ESX.Game.SpawnVehicle('tiptruck', vector3(1214.5858154297,-1321.7121582031,35.226902008057), 85.29, function(v)
         SetPedIntoVehicle(PlayerPedId(), v, -1)
